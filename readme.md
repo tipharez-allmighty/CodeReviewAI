@@ -36,3 +36,7 @@ Before you begin, ensure you have met the following requirements:
    ```bash
    poetry run uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
+# Part 2: What if
+To scale the Coding Assignment Auto-Review Tool prototype for handling 100+ new review requests per minute and large repositories with 100+ files, I would implement a microservices architecture with load balancing and asynchronous processing using a message queue (e.g., RabbitMQ or AWS SQS). This decouples incoming requests from processing, allowing for efficient handling of spikes in traffic. A NoSQL database (like MongoDB or DynamoDB) would provide the flexibility to manage dynamic repository structures, while caching layers (e.g., Redis) would improve performance by reducing database load.
+
+For managing increased usage of the OpenAI and GitHub APIs, I would employ a rate limit backoff strategy that gradually increases wait times for requests when limits are approached. Additionally, implementing a Retrieval-Augmented Generation (RAG) approach would allow for efficient handling of data beyond the content window by retrieving relevant information before generating responses. Monitoring and logging would be essential for maintaining system reliability and diagnosing issues during high traffic, ensuring a robust and scalable architecture.

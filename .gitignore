@@ -1,11 +1,16 @@
+# Python cache and build artifacts
 __pycache__/
 *.py[cod]
-.venv/
-.env
 *.egg-info/
 dist/
 build/
-Dockerfile
-docker-compose.yml
+
+# Python virtual environment
+.venv/
+.env
+
+# Logs
 *.log
+
+# Exclude unnecessary files
 *.env

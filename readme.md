@@ -36,6 +36,23 @@ Before you begin, ensure you have met the following requirements:
    ```bash
    poetry run uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
+## Testing the Review Endpoint
+To test the review endpoint, follow these steps:
+
+Open your web browser and navigate to http://127.0.0.1:8000/docs.
+Authorize your access by following the prompts.
+Once authorized, you can test the /review endpoint using the following JSON payload:
+
+    json
+
+{
+    "assignment_description": "A sample repo for testing",
+    "github_repo_url": "https://github.com/sample/repo",
+    "candidate_level": "Junior"
+}
+
+Send the request to receive the review results.
+
 # Part 2: What if
 To scale the Coding Assignment Auto-Review Tool prototype for handling 100+ new review requests per minute and large repositories with 100+ files, I would implement a microservices architecture with load balancing and asynchronous processing using a message queue (e.g., RabbitMQ or AWS SQS). This decouples incoming requests from processing, allowing for efficient handling of spikes in traffic. A NoSQL database (like MongoDB or DynamoDB) would provide the flexibility to manage dynamic repository structures, while caching layers (e.g., Redis) would improve performance by reducing database load.
 

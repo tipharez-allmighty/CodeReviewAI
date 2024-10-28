@@ -21,8 +21,6 @@ Before you begin, ensure you have met the following requirements:
 
 ## Installation
 
-### Option 1: Local Installation
-
 1. **Clone the repository**:
 
    ```bash
@@ -32,33 +30,31 @@ Install dependencies:
 
 Ensure you have Poetry installed, then run:
 
-bash
-
-poetry install
+```bash
+   poetry install
 
 Set up environment variables:
 
 Create a .env file in the project root with the following content:
 
-env
-
-API_KEY=your_api_key
-API_KEY_NAME=your_api_key_name
-API_TOKEN_GITHUB=your_github_token
-OPENAI_KEY=your_openai_key
+```bash
+    env
+   API_KEY=your_api_key
+   API_KEY_NAME=your_api_key_name
+   API_TOKEN_GITHUB=your_github_token
+   OPENAI_KEY=your_openai_key
 
 Replace your_api_key, your_api_key_name, your_github_token, and your_openai_key with your actual keys.
 
 Run Redis (Docker):
-
-docker-compose up --build
+```bash
+   docker-compose up --build
 
 Run the application:
 
 You can start the FastAPI server using:
 
-bash
-
+```bash
 poetry run uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
 The application will be available at http://localhost:8000.

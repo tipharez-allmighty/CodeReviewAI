@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "codereviewai"
+version = "0.1.0"
+description = ""
+authors = ["tipharez-allmighty <artemkolos@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.3"
+redis = "^5.2.0"
+uvicorn = "^0.32.0"
+python-dotenv = "^1.0.1"
+openai = "^1.52.2"
+httpx = "^0.27.2"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+pytest-mock = "^3.14.0"
+pytest-asyncio = "^0.24.0"
+black = "^24.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

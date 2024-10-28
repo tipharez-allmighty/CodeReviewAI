@@ -97,16 +97,14 @@ async def review(repo: Repository, api_key: str = Depends(get_api_key)) -> JSONR
 
     repo_retriever = GitHubAPI(repo.github_repo_url, API_TOKEN_GITHUB)
     repo_content, repo_files = await repo_retriever.get_all_files()
-    print(repo_content)
 
     ai_response = get_openai_response(
         OPENAI_KEY, repo_content, repo_files, repo.candidate_level
     )
-    print(repo_content)
 
     review_result = {"message": ai_response, "repository": repo.model_dump()}
 
     rd.set(
         cache_key, json.dumps(review_result), ex=60
-    )  # Cache the result for 60 seconds
+    )
     return JSONResponse(content=review_result)

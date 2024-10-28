@@ -19,4 +19,20 @@ Before you begin, ensure you have met the following requirements:
 - GitHub API token
 - OpenAI API key
 
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/tipharez-allmighty/CodeReviewAI.git
+   cd CodeReviewAI
+
+2. **Ensure you have Poetry installed, then run:**:
+   ```bash
+   poetry install
+
+3. **Run Redis (Docker):**:
+   ```bash
+   docker-compose up --build
+
+4. **Run the application: You can start the FastAPI server using:**:
+   ```bash
+   poetry run uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 

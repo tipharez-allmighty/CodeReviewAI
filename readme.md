@@ -21,40 +21,50 @@ Before you begin, ensure you have met the following requirements:
 
 ## Installation
 
-1. **Clone the repository**:
+Sure! Here’s your markdown edited for consistent styling and formatting:
 
+markdown
+
+# CodeReviewAI Setup Instructions
+
+## Local Installation
+
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/tipharez-allmighty/CodeReviewAI.git
    cd CodeReviewAI
-Install dependencies:
 
-Ensure you have Poetry installed, then run:
+    Install dependencies: Ensure you have Poetry installed, then run:
 
-```bash
-   poetry install
+    bash
 
-Set up environment variables:
+poetry install
 
-Create a .env file in the project root with the following content:
+Set up environment variables: Create a .env file in the project root with the following content:
 
-```bash
-    env
-   API_KEY=your_api_key
-   API_KEY_NAME=your_api_key_name
-   API_TOKEN_GITHUB=your_github_token
-   OPENAI_KEY=your_openai_key
+bash
+
+echo -e "API_KEY=your_api_key\nAPI_KEY_NAME=your_api_key_name\nAPI_TOKEN_GITHUB=your_github_token\nOPENAI_KEY=your_openai_key" > .env
 
 Replace your_api_key, your_api_key_name, your_github_token, and your_openai_key with your actual keys.
 
 Run Redis (Docker):
-```bash
-   docker-compose up --build
 
-Run the application:
+bash
 
-You can start the FastAPI server using:
+docker-compose up --build
 
-```bash
-poetry run uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+Run the application: You can start the FastAPI server using:
 
-The application will be available at http://localhost:8000.
+bash
+
+    poetry run uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+    The application will be available at http://localhost:8000.
+
+vbnet
+
+
+This version maintains a consistent format throughout, making it easier to follow. Let me know if you need any further modifications! 😊
+
+

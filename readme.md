@@ -44,12 +44,11 @@ Authorize your access by following the prompts.
 Once authorized, you can test the /review endpoint using the following JSON payload:
 
     json
-
-{
-    "assignment_description": "A sample repo for testing",
-    "github_repo_url": "https://github.com/sample/repo",
-    "candidate_level": "Junior"
-}
+      {
+       "assignment_description": "A sample repo for testing",
+       "github_repo_url": "https://github.com/sample/repo",
+       "candidate_level": "Junior"
+      }
 
 Send the request to receive the review results.
 

@@ -13,9 +13,8 @@ This FastAPI application provides a service to perform code reviews based on the
 
 Before you begin, ensure you have met the following requirements:
 
-- Python 3.7 or higher (if running locally)
-- Docker and Docker Compose installed (if using Docker)
-- Redis server installed and running (if running locally)
+- Python 3.7 or higher
+- Docker and Docker Compose installed
 - GitHub API token
 - OpenAI API key
 
